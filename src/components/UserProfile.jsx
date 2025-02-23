@@ -5,6 +5,7 @@ import databaseService from '../services/dataService';
 function UserProfile() {
 
     const { slug } = useParams();
+    console.log(slug);
     const fullData = {
         leetcode: {
             easy: 0,
