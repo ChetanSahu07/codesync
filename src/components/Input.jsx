@@ -11,7 +11,7 @@ function Input({
     const id = useId() 
     
   return (
-    <div className='text-white  bg-gray-700 py-5 w-1/2  rounded-md px-4'>
+    <div className='text-white  bg-gray-700 py-5 w-58  rounded-md px-4'>
         { label && <label className='font-bold text-gray-300' htmlFor={id} >
             {label}
         </label>
