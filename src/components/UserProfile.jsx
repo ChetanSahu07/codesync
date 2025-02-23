@@ -5,7 +5,6 @@ import databaseService from '../services/dataService';
 function UserProfile() {
 
     const { slug } = useParams();
-    console.log(slug);
     const fullData = {
         leetcode: {
             easy: 0,
@@ -126,34 +125,42 @@ function UserProfile() {
         </div>
     ) : (
         <div className=" text-lg gap-5 text-white justify-center items-center flex-col flex flex-wrap bg-cover h-screen bg-[url('/img2.jpg')]">
-            <div className='bg-gray-600 rounded-md w-1/2 px-5 py-2 flex flex-col gap-2'>
+            <div className='items-center bg-gray-600 w-58 rounded-md  px-5 py-2 flex flex-col gap-2'>
                 <div className='flex flex-wrap gap-2'>
                     <div className='font-bold'>Leetcode</div>
                     <img className='h-8 bg-white rounded-md' src='https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png'></img>
                 </div>
+                <div className='flex flex-col gap-2'>
                 <div className='bg-green-700 px-2 rounded-md'>Easy Solved: {d.leetcode.easy} </div>
                 <div className='bg-yellow-700 px-2 rounded-md'>Medium Solved: {d.leetcode.medium} </div>
                 <div className='bg-red-700 px-2 rounded-md'>Hard Solved: {d.leetcode.hard} </div>
                 <div className='bg-blue-800 px-2 rounded-md'>Total Solved:  {d.leetcode.total} </div>
+                </div>
+                
             </div>
-            <div className='bg-gray-600 rounded-md w-1/2 px-5 py-2 flex flex-col gap-2'>
+            <div className='bg-gray-600 w-58 rounded-md items-center px-5 py-2 flex flex-col gap-2'>
                 <div className='flex flex-wrap gap-2'>
                     <div className='font-bold' >CodeForces</div>
                     <img className='h-8 bg-white rounded-md' src='https://cdn.iconscout.com/icon/free/png-256/free-code-forces-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-2-pack-logos-icons-2944796.png?f=webp&w=256' ></img>
                 </div>
-
+                <div className='flex flex-col gap-2'>
                 <div className='bg-amber-700 px-2 rounded-md' >Rating: {d.codeforces.rating} </div>
                 <div className='bg-cyan-700 px-2 rounded-md'>MaxRating: {d.codeforces.maxrating} </div>
                 <div className='bg-green-700 px-2 rounded-md'>Rank: {d.codeforces.rank} </div>
+                </div>
+                
             </div>
-            <div className='bg-gray-600 rounded-md w-1/2 px-5 py-2 flex flex-col gap-2'>
+            <div className='bg-gray-600 items-center w-58 rounded-md px-5 py-2 flex flex-col gap-2'>
             <div className='flex flex-wrap gap-2'>
             <div className='font-bold'>CodeChef</div>
             <img className='h-8 bg-white rounded-md' src='https://img.icons8.com/fluent/512/codechef.png'></img>
-            </div>
-                <div className='bg-amber-700 px-2 rounded-md'>Rating: {d.codechef.rating} </div>
+            </div >
+            <div className='flex flex-col gap-2'>
+            <div className='bg-amber-700 px-2 rounded-md'>Rating: {d.codechef.rating} </div>
                 <div className='bg-cyan-700 px-2 rounded-md'>MaxRating: {d.codechef.maxrating} </div>
                 <div className='bg-green-700 px-2 rounded-md'>Stars: {d.codechef.stars} </div>
+            </div>
+                
             </div>
         </div>
     )
